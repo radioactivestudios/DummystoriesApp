@@ -6,8 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 import java.util.ArrayList;
 
@@ -22,6 +27,21 @@ public class Home extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-3940256099942544/6300978111");
+        AdView mAdView = (AdView) findViewById(R.id.adView_Home);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+        final Button EmailButton = (Button)findViewById(R.id.SendEmailHomeList);
+        EmailButton.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent emailIntent = new Intent(Home.this,Emailer.class);
+                //Toast.makeText(GridViewActivity.this, "GridView Item: " +EmailButton.getText() , Toast.LENGTH_LONG).show();
+                startActivity(emailIntent);
+            }
+        });
         Intent intent = getIntent();
         SelectedCataegory = intent.getStringExtra("selected-cataegory");
          StoryList = (ListView) findViewById(R.id.HorrorstoryList);

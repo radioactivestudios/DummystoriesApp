@@ -1,11 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-<ImageView
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:id="@+id/logo"
-    android:layout_gravity="center"
-    android:src="@drawable/logo"/>
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        android:orientation="vertical"
+        android:weightSum="50" >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logo"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/logo"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+
+        android:orientation="vertical"
+        android:weightSum="50" >
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView_Splash"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/SplashAdUnitID">
+
+    </com.google.android.gms.ads.AdView>
+    </LinearLayout>
+
+</RelativeLayout>

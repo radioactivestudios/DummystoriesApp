@@ -11,6 +11,10 @@ import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -29,6 +33,10 @@ TextView HorrorStoryText;
 
         super.onCreate(savedInstances);
         setContentView(R.layout.activity_horrorstory_1);
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-3940256099942544/6300978111");
+        AdView mAdView = (AdView) findViewById(R.id.adView_HorrorStory_List);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         HorrorStoryText =(TextView) findViewById(R.id.HorrorStoryMainText);
         //HorrorStoryText.setMovementMethod();
@@ -70,7 +78,7 @@ TextView HorrorStoryText;
 
         String SelectedStory = myMap.get(StoryTitle);
         setTitle(SelectedStory);
-        Toast.makeText(HorrorStoryActivity.this, "GridView Item: " +cataegory, Toast.LENGTH_LONG).show();
+       // Toast.makeText(HorrorStoryActivity.this, "GridView Item: " +cataegory, Toast.LENGTH_LONG).show();
         HorrorStoryText.setText(SelectedStory);
         HorrorStoryText.setMovementMethod(new ScrollingMovementMethod());
 

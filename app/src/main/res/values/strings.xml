@@ -1,4 +1,14 @@
 <resources>
+    <string name="Addofapp">AdMob</string>
+    <string name="title_activity_second_activiy">Interstitial</string>
+    <string name="msg_welcome">Welcome to Admob. Click on the below button to launch the Interstitial ad.</string>
+    <string name="btn_fullscreen_ad">Show Fullscreen Ad</string>
+
     <string name="app_name">Horror Stories</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="SplashAdUnitID">ca-app-pub-7684795550101697/9971898967</string>
+    <string name="CategoryGridUnitID">ca-app-pub-7684795550101697/6534081361</string>
+    <string name="StoryListAdUnitID">ca-app-pub-7684795550101697/6878831765</string>
+    <string name="FullStoryTextUnitID">ca-app-pub-7684795550101697/8355564962</string>
+    <string name="EmailerAdUnitID">ca-app-pub-7684795550101697/2448632167</string>
 </resources>

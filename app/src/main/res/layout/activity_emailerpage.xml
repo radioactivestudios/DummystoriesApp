@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/EmailPageText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="प्रिय दोस्तों, अब आप भी हमें अपनी लिखी हुई कहानी भेज सकते है। हम इसे आपके नाम और फोटो के साथ प्रकाशित करे। अगर आप के पास कोई कहानी है तो हमें तुरंत भेजे। "
+        android:textColor="@color/colorPrimary"
+        android:maxLines="1000000"
+        android:scrollbars="vertical"
+        android:textSize="15sp">
+        <requestFocus />
+    </TextView>
+
+
+
+    <TextView
+        android:id="@+id/textViewSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="शीर्षक / कहानी का नाम "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editStoryTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+    </EditText>
+
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="पूरी कहानी : "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editStoryFull"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:lines="5" />
+
+    <Button
+        android:id="@+id/EmailNow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Send"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView_emailPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/EmailerAdUnitID">
+    </com.google.android.gms.ads.AdView>
+
+</LinearLayout>

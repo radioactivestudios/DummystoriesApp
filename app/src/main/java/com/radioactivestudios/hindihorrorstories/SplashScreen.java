@@ -8,6 +8,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 /**
  * Created by radioactive on 4/13/2017.
  */
@@ -18,6 +21,9 @@ public class SplashScreen extends Activity {
         super.onCreate(SavedInstanceState);
         setContentView(R.layout.activity_splash);
         Log.w("Created activity","on top");
+        AdView mAdView = (AdView) findViewById(R.id.adView_Splash);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         final ImageView SplahLogo = (ImageView) findViewById(R.id.logo);
         final Animation Anim1 = AnimationUtils.loadAnimation(getBaseContext(),R.anim.rotate);
         final Animation Anim2 = AnimationUtils.loadAnimation(getBaseContext(),R.anim.antirotate);
