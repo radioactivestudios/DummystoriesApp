@@ -39,11 +39,11 @@ public class Emailer extends Activity {
         EmailNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String to = textTo;
+                String to = "horrorstorieshindi@gmail.com";
                 String StoryTitle =textSubject.getText().toString();
                 String StroryFull =textMessage.getText().toString();
                 Intent email_Stroy_to_App = new Intent(Intent.ACTION_SEND);
-                email_Stroy_to_App.putExtra(Intent.EXTRA_EMAIL,to);
+                email_Stroy_to_App.putExtra(Intent.EXTRA_EMAIL,new String[]{"horrorstorieshindi@gmail.com"});
                 email_Stroy_to_App.putExtra(Intent.EXTRA_SUBJECT,StoryTitle);
                 email_Stroy_to_App.putExtra(Intent.EXTRA_TEXT,StroryFull);
                 email_Stroy_to_App.setType("message/rfc822");

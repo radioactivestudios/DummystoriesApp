@@ -25,12 +25,13 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id">
+        ads:adUnitId="@string/StoryListAdUnitID">
 
     </com.google.android.gms.ads.AdView>
     <Button
         android:id="@+id/SendEmailHomeList"
         android:text="अपनी कहानी हमें भेजें "
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

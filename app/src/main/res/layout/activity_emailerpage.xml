@@ -8,7 +8,7 @@
         android:id="@+id/EmailPageText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="प्रिय दोस्तों, अब आप भी हमें अपनी लिखी हुई कहानी भेज सकते है। हम इसे आपके नाम और फोटो के साथ प्रकाशित करे। अगर आप के पास कोई कहानी है तो हमें तुरंत भेजे। "
+        android:text="प्रिय दोस्तों, अब आप भी हमें अपनी लिखी हुई कहानी भेज सकते है। हम इसे आपके नाम और फोटो के साथ प्रकाशित करेंगे । अगर आप के पास कोई कहानी है तो हमें तुरंत भेजे। आप अपने सुझाव भी भेज सकते है। "
         android:textColor="@color/colorPrimary"
         android:maxLines="1000000"
         android:scrollbars="vertical"
